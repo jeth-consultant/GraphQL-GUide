@@ -2,9 +2,10 @@ import { ApolloServer } from "@apollo/server";
 
 import { startStandaloneServer } from "@apollo/server/standalone";
 import mergeResolver from "./resolvers/index.js";
+import mergeTypeDef from "./typeDefs/index.js";
 
-const server = ApolloServer({
-  typeDefs,
+const server = new ApolloServer({
+  typeDefs: mergeTypeDef,
   resolvers: mergeResolver,
 });
 
