@@ -1,14 +1,19 @@
 import { users } from "../dummyData/data.js";
-const userRseolver = {
+
+const userResolver = {
   Query: {
-    users: () => {
+    users: (parent, args, context) => {
+      const { req } = context;
+
       return users;
     },
-    user: (_, { userId }) => {
-      return users.find((user) => user._id == userId);
+
+    user: (parent, { userId }) => {
+      return users.find((user) => user._id === userId);
     },
   },
+
   Mutation: {},
 };
 
-export default userRseolver;
+export default userResolver;
