@@ -1,8 +1,16 @@
-import "./App.css";
-
+import Routes, { Route } from "react-router-dom";
 function App() {
   return (
-    <h1 class="text-3xl font-bold text-red-500">Tailwind is working 🚀</h1>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/login" element={<LoginPage />}></Route>
+                <Route path="/signup" element={<SignUpPage />}></Route>
+
+        <Route path="/transaction/:id" element={<TransactionPage />}></Route>
+        <Route path="*" element={<NotFoundPage />}></Route>
+      </Routes>
+    </>
   );
 }
 
