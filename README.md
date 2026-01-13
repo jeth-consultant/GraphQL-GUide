@@ -24,26 +24,6 @@ Structuring a full-stack GraphQL project
 Handling transactions in GraphQL
 
 Clean project architecture
-
-🗂️ Project Structure
-GraphQL-GUide/
-│
-├── backend/              # GraphQL API (Schema, Resolvers, Server)
-│   ├── schema/           # GraphQL type definitions
-│   ├── resolvers/        # Query & Mutation resolvers
-│   ├── models/           # Database models
-│   ├── config/           # DB & environment configuration
-│   └── index.ts/js       # Server entry point
-│
-├── frontend/             # Client application
-│   ├── src/
-│   │   ├── graphql/      # Queries & Mutations
-│   │   ├── components/   # UI components
-│   │   ├── pages/        # Application pages
-│   │   └── services/     # API integration
-│
-└── README.md
-
 ⚙️ Technologies Used
 Backend
 
